@@ -116,8 +116,8 @@ img {
 }
 
 .date {
-  font-style: italic;
-  color: $gray;
+  font-weight: bold;
+  color: $darkGray;
 }
 
 // Specify the color of the selection
@@ -127,7 +127,7 @@ img {
 }
 ::selection {
   color: $black;
-  background: $lightGray;
+  background: $Gray;
 }
 
 // Nicolas Gallagher's micro clearfix hack
