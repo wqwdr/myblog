@@ -13,20 +13,5 @@ layout: default
     {{ page.date | date: "%Y.%m.%d" }}
   </div>
 
-  <div id="container"></div>
-  <link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
-  <script src="https://jjeejj.github.io/js/gitment.js"></script>
-  <script>
-  var gitment = new Gitment({
-    id: '{{ page.date }}', #对应文章评论所形成issue的label，默认为文章的url,为了防止url过长导致评论初始化失败，这里设置label为文章yaml中的时间。这一项无需更改
-    owner: 'wqwdr', #Github Pages博客所在的github账户名
-    repo: 'wqwdr.github.io', #Github Pages博客所在仓库名
-    oauth: {
-      client_id: 'e2c88e199f4e5d41cfd2', #第1步所申请到的Client ID
-      client_secret: '1a6faee97a3242ee8531ca1b771531443ed2c9e6',#第1步所申请到的Client Secret
-      },
-  })
-gitment.render('container')
-</script>
   {% include disqus.html %}
 </article>
