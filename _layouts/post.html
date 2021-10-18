@@ -13,5 +13,19 @@ layout: default
     {{ page.date | date: "%Y.%m.%d" }}
   </div>
 
+  <div id="gitmentContainer"></div>
+  <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+  <script>
+  var gitment = new Gitment({
+      owner: '网球玩的人',
+      repo: 'https://wqwdr.github.io/report/',
+      oauth: {
+          client_id: 'e2c88e199f4e5d41cfd2',
+          client_secret: 'd2acd7f6e07b8d7203348d84c34c6289c2dfbc92',
+      },
+  });
+gitment.render('gitmentContainer');
+</script>
   {% include disqus.html %}
 </article>
